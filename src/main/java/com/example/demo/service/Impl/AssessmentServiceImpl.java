@@ -10,7 +10,7 @@ import java.util.List;
 public class AssessmentServiceImpl implements AssessmentService {
 
     @Override
-    public AssessmentResult saveResult(AssessmentResult result) {
+    public AssessmentResult recordAssessment(AssessmentResult result) {
         return result;
     }
 
