@@ -16,18 +16,22 @@ public class StudentProfileServiceImpl implements StudentProfileService {
         this.repo = repo;
     }
 
+    @Override
     public StudentProfile createOrUpdateProfile(StudentProfile profile) {
         return repo.save(profile);
     }
 
+    @Override
     public StudentProfile getProfileById(Long id) {
         return repo.findById(id).orElseThrow();
     }
 
-    public StudentProfile getByUserId(Long userId) {
-        return repo.findByUserId(userId).orElseThrow();
+    @Override
+    public StudentProfile getProfileByEnrollmentId(String enrollmentId) {
+        return repo.findByEnrollmentId(enrollmentId).orElseThrow();
     }
 
+    @Override
     public List<StudentProfile> getAllProfiles() {
         return repo.findAll();
     }

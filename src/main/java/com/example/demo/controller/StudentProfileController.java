@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.StudentProfile;
 import com.example.demo.service.StudentProfileService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,17 +18,22 @@ public class StudentProfileController {
     }
 
     @PostMapping
-    public StudentProfile create(@RequestBody StudentProfile p) {
-        return service.createOrUpdateProfile(p);
+    public ResponseEntity<StudentProfile> create(@RequestBody StudentProfile profile) {
+        return ResponseEntity.ok(service.createOrUpdateProfile(profile));
     }
 
     @GetMapping("/{id}")
-    public StudentProfile get(@PathVariable Long id) {
-        return service.getProfileById(id);
+    public ResponseEntity<StudentProfile> getById(@PathVariable Long id) {
+        return ResponseEntity.ok(service.getProfileById(id));
+    }
+
+    @GetMapping("/enrollment/{enrollmentId}")
+    public ResponseEntity<StudentProfile> getByEnrollment(@PathVariable String enrollmentId) {
+        return ResponseEntity.ok(service.getProfileByEnrollmentId(enrollmentId));
     }
 
     @GetMapping
-    public List<StudentProfile> getAll() {
-        return service.getAllProfiles();
+    public ResponseEntity<List<StudentProfile>> getAll() {
+        return ResponseEntity.ok(service.getAllProfiles());
     }
 }
