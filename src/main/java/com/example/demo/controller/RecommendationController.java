@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.SkillGapRecommendation;
 import com.example.demo.service.RecommendationService;
+import com.example.demo.entity.AssessmentResult;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,3 +30,5 @@ public class RecommendationController {
     
 }
  
+
+ import com.example.demo.entity.AssessmentResult;
