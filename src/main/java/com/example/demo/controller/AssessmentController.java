@@ -5,6 +5,9 @@ import com.example.demo.service.AssessmentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+service.saveResult(result);
+
+
 import java.util.List;
 
 @RestController
