@@ -11,25 +11,25 @@ import java.util.List;
 @RequestMapping("/api/skills")
 public class SkillController {
 
-    private final SkillService service;
+    private final SkillService Service;
 
-    public SkillController(SkillService service) {
+    public SkillController(SkillService Service) {
         this.service = service;
     }
 
     @PostMapping
     public ResponseEntity<Skill> create(@RequestBody Skill skill) {
-        return ResponseEntity.ok(service.createSkill(skill));
+        return ResponseEntity.ok(Service.createSkill(skill));
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Skill> update(@PathVariable Long id, @RequestBody Skill skill) {
-        return ResponseEntity.ok(service.updateSkill(id, skill));
+        return ResponseEntity.ok(Service.updateSkill(id, skill));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Skill> get(@PathVariable Long id) {
-        return ResponseEntity.ok(service.getById(id));
+        return ResponseEntity.ok(Service.getById(id));
     }
 
     @GetMapping

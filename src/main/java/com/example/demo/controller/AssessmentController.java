@@ -11,20 +11,20 @@ import java.util.List;
 @RequestMapping("/api/assessments")
 public class AssessmentController {
 
-    private final AssessmentService service;
+    private final AssessmentService Service;
 
-    public AssessmentController(AssessmentService service) {
+    public AssessmentController(AssessmentService Service) {
         this.service = service;
     }
 
     @PostMapping
     public ResponseEntity<AssessmentResult> record(@RequestBody AssessmentResult result) {
-        return ResponseEntity.ok(service.recordAssessment(result));
+        return ResponseEntity.ok(Service.recordAssessment(result));
     }
 
     @GetMapping("/student/{studentId}")
     public ResponseEntity<List<AssessmentResult>> getByStudent(@PathVariable Long studentId) {
-        return ResponseEntity.ok(service.getResultsByStudent(studentId));
+        return ResponseEntity.ok(Service.getResultsByStudent(studentId));
     }
 
     @GetMapping("/student/{studentId}/skill/{skillId}")
