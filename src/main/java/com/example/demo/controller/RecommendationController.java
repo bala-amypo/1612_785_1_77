@@ -26,9 +26,5 @@ public class RecommendationController {
     public ResponseEntity<List<SkillGapRecommendation>> get(@PathVariable Long studentId) {
         return ResponseEntity.ok(service.getRecommendationsForStudent(studentId));
     }
-    @Override
-public AssessmentResult saveResult(AssessmentResult result) {
-    return repository.save(result);
-}
-
+    
 }
