@@ -1,14 +1,40 @@
 package com.example.demo.service;
 
 import com.example.demo.entity.AssessmentResult;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 import java.util.List;
 
+@Service
+public class AssessmentService {
 
-public interface AssessmentService {
+    private final List<AssessmentResult> results = new ArrayList<>();
 
-    AssessmentResult saveResult(AssessmentResult result);
+    
+    public AssessmentResult recordAssessment(AssessmentResult result) {
+        results.add(result);
+        return result;
+    }
 
-    List<AssessmentResult> getResultsByStudent(Long studentId);
+    public List<AssessmentResult> getResultsByStudent(Long studentId) {
+        List<AssessmentResult> filtered = new ArrayList<>();
+        for (AssessmentResult r : results) {
+            if (r.getStudentId().equals(studentId)) {
+                filtered.add(r);
+            }
+        }
+        return filtered;
+    }
 
-    List<AssessmentResult> getResultsByStudentAndSkill(Long studentId, Long skillId);
+    public List<AssessmentResult> getResultsByStudentAndSkill(Long studentId, Long skillId) {
+        List<AssessmentResult> filtered = new ArrayList<>();
+        for (AssessmentResult r : results) {
+            if (r.getStudentId().equals(studentId)
+                    && r.getSkillId().equals(skillId)) {
+                filtered.add(r);
+            }
+        }
+        return filtered;
+    }
 }

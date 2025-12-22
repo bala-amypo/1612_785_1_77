@@ -1,26 +1,51 @@
 package com.example.demo.entity;
 
-import jakarta.persistence.*;
-import java.time.Instant;
-
-@Entity
 public class AssessmentResult {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long studentId;
+    private Long skillId;
+    private int score;
 
-    @ManyToOne(optional = false)
-    private StudentProfile studentProfile;
+    public AssessmentResult() {
+    }
 
-    @ManyToOne(optional = false)
-    private Skill skill;
+    public AssessmentResult(Long id, Long studentId, Long skillId, int score) {
+        this.id = id;
+        this.studentId = studentId;
+        this.skillId = skillId;
+        this.score = score;
+    }
 
-    private String assessmentId;
-    private Double score;
-    private Double maxScore = 100.0;
-    private Instant attemptedAt = Instant.now();
+    public Long getId() {
+        return id;
+    }
 
-    // getters & setters
+    public Long getStudentId() {
+        return studentId;
+    }
+
+    public Long getSkillId() {
+        return skillId;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setStudentId(Long studentId) {
+        this.studentId = studentId;
+    }
+
+    public void setSkillId(Long skillId) {
+        this.skillId = skillId;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
 }
-    
