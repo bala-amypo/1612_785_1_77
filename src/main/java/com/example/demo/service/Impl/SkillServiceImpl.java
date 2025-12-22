@@ -47,11 +47,7 @@ public class SkillServiceImpl implements SkillService {
         Skill skill = skillRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Skill not found"));
 
-        skill.setActive(false); // assuming Skill has `active` field
+        skill.setActive(false); 
         skillRepository.save(skill);
     }
 }
-the error is 
-[ERROR] /home/coder/Workspace/demo/src/main/java/com/example/demo/service/Impl/SkillServiceImpl.java:[28,31] cannot find symbol
-[ERROR]   symbol:   method getName()
-[ERROR]   location: variable skill of type com.example.demo.entity.Skill

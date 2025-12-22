@@ -15,7 +15,6 @@ public class Skill {
 
     private boolean active = true;
 
-    // ✅ REQUIRED: Getters and Setters
 
     public Long getId() {
         return id;
@@ -25,15 +24,15 @@ public class Skill {
         this.id = id;
     }
 
-    public String getName() {          // ✅ THIS WAS MISSING
+    public String getName() {           
         return name;
     }
 
-    public void setName(String name) { // ✅ THIS WAS MISSING
+    public void setName(String name) { 
         this.name = name;
     }
 
-    public String getDescription() {   // ✅ REQUIRED
+    public String getDescription() {   
         return description;
     }
 
@@ -41,7 +40,7 @@ public class Skill {
         this.description = description;
     }
 
-    public boolean isActive() {         // boolean getter
+    public boolean isActive() {        
         return active;
     }
 
