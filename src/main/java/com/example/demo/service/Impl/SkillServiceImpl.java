@@ -19,10 +19,11 @@ public class SkillServiceImpl implements SkillService {
         return skill;
     }
 
-    @Override
-    public Skill getById(Long id) {
-        return null;
-    }
+   @Override
+public Skill getById(Long id) {
+    return skillRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Skill not found"));
+}
 
     @Override
     public List<Skill> getAllSkills() {
