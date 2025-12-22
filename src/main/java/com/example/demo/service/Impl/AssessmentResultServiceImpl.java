@@ -19,7 +19,7 @@ public class AssessmentResultServiceImpl implements AssessmentResultService {
     }
 
     @Override
-    public AssessmentResult recordResult(AssessmentmentResult result) {
+    public AssessmentResult recordResult(AssessmentResult result) {
 
         // Validate score
         Assert.notNull(result, "Assessment result must not be null");
