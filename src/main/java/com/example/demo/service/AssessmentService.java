@@ -12,7 +12,7 @@ public interface AssessmentService {
     public final List<AssessmentResult> results = new ArrayList<>();
 
     
-    public AssessmentResult recordAssessment(AssessmentResult result) {
+    AssessmentResult recordAssessment(AssessmentResult result) {
         results.add(result);
         return result;
     }

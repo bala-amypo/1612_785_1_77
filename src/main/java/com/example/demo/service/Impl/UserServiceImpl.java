@@ -16,15 +16,15 @@ public class UserServiceImpl implements AuthService {
     @Override
     public User register(RegisterRequest request) {
         User user = new User();
-        user.setFullName(req.getFullName());
-        user.setEmail(req.getEmail());
-        user.setPassword(req.getPassword());
-        user.setRole(req.getRole());
+        user.setFullName(request.getFullName());
+        user.setEmail(request.getEmail());
+        user.setPassword(request.getPassword());
+        user.setRole(request.getRole());
         return userRepository.save(user);
     }
 
     @Override
     public User login(LoginRequest request) {
-        return userRepository.findByEmail(req.getEmail());
+        return userRepository.findByEmail(request.getEmail());
     }
 }
