@@ -19,7 +19,7 @@ public class StudentProfileController {
 
     @PostMapping
     public ResponseEntity<StudentProfile> create(@RequestBody StudentProfile profile) {
-        return ResponseEntity.ok(serve890-.createOrUpdateProfile(profile));
+        return ResponseEntity.ok(serve.createOrUpdateProfile(profile));
     }
 
     @GetMapping("/{id}")
