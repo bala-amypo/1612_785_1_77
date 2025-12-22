@@ -2,6 +2,11 @@ package com.example.demo.entity;
 
 import jakarta.persistence.*;
 import java.time.Instant;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 
 @Entity
 public class StudentProfile {
