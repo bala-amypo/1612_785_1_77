@@ -2,6 +2,7 @@ package com.example.demo.serviceimpl;
 
 import com.example.demo.entity.Skill;
 import com.example.demo.service.SkillService;
+import com.example.demo.repository.SkillServiceRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
