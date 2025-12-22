@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
 import java.util.List;
-import com.example.demo.model.AssessmentResult;
+import com.example.demo.entity.AssessmentResult;
 
 public interface AssessmentResultService {
 
