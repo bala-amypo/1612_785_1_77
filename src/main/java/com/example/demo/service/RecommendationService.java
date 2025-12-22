@@ -5,5 +5,5 @@ import java.util.List;
 
 public interface RecommendationService {
 
-    List<Recommendation> computeRecommendationsForStudent(Long studentId);
+    List<SkillGapRecommendation> computeRecommendationsForStudent(Long studentId);
 }

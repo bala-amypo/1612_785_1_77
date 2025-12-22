@@ -24,7 +24,7 @@ public class UserServiceImpl implements AuthService {
     }
 
     @Override
-    public User login(LoginRequest req) {
+    public User login(LoginRequest request) {
         return userRepository.findByEmail(req.getEmail());
     }
 }
