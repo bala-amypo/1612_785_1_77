@@ -16,7 +16,7 @@ public class RecommendationController {
     private final RecommendationService serve;
 
     public RecommendationController(RecommendationService serve) {
-        this.sere = serve;
+        this.serve = serve;
     }
 
     @PostMapping("/generate/{studentId}")
