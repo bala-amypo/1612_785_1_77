@@ -51,3 +51,7 @@ public class SkillServiceImpl implements SkillService {
         skillRepository.save(skill);
     }
 }
+the error is 
+[ERROR] /home/coder/Workspace/demo/src/main/java/com/example/demo/service/Impl/SkillServiceImpl.java:[28,31] cannot find symbol
+[ERROR]   symbol:   method getName()
+[ERROR]   location: variable skill of type com.example.demo.entity.Skill
