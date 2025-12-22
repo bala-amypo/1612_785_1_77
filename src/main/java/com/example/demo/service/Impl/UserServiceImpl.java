@@ -11,11 +11,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements AuthService {
 
-    @Autowired
-    private UserRepository userRepository;
+    @Autowired UserRepository userRepository;
 
     @Override
-    public User register(RegisterRequest req) {
+    public User register(RegisterRequest request) {
         User user = new User();
         user.setFullName(req.getFullName());
         user.setEmail(req.getEmail());
