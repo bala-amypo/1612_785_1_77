@@ -9,6 +9,7 @@ import java.util.List;
 @Service
 public class SkillServiceImpl implements SkillService {
 
+    @Autowired SkillRepository skillRepository;
     @Override
     public Skill createSkill(Skill skill) {
         return skill;

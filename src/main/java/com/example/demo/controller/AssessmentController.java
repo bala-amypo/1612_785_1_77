@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/api/assessments")
 public class AssessmentController {
 
-    public final AssessmentResultService serve;
+    private final AssessmentResultService serve;
 
   
   
