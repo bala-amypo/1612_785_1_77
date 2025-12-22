@@ -11,7 +11,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements AuthService {
 
-    @Autowired UserRepository userRepository;
+    @Autowired
+    private UserRepository userRepository;
 
     @Override
     public User register(RegisterRequest request) {
@@ -25,6 +26,7 @@ public class UserServiceImpl implements AuthService {
 
     @Override
     public User login(LoginRequest request) {
-        return userRepository.findByEmail(request.getEmail());
+        return userRepository.findByEmail(request.getEmail())
+                .orElseThrow(() -> new RuntimeException("Invalid email or password"));
     }
 }
