@@ -1,9 +1,7 @@
 package com.example.demo.controller;
 
-
 import com.example.demo.entity.SkillGapRecommendation;
 import com.example.demo.service.RecommendationService;
-import com.example.demo.entity.AssessmentResult;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,15 +19,15 @@ public class RecommendationController {
 
     @PostMapping("/generate/{studentId}")
     public ResponseEntity<List<SkillGapRecommendation>> generate(@PathVariable Long studentId) {
-        return ResponseEntity.ok(serve.computeRecommendationsForStudent(studentId));
+        return ResponseEntity.ok(
+                serve.computeRecommendationsForStudent(studentId)
+        );
     }
 
     @GetMapping("/student/{studentId}")
     public ResponseEntity<List<SkillGapRecommendation>> get(@PathVariable Long studentId) {
-        return ResponseEntity.ok(serve.getRecommendationsForStudent(studentId));
+        return ResponseEntity.ok(
+                serve.getRecommendationsForStudent(studentId)
+        );
     }
-    
 }
- 
-
- 

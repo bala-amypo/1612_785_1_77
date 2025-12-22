@@ -11,6 +11,13 @@ public class RecommendationServiceImpl implements RecommendationService {
 
     @Override
     public List<SkillGapRecommendation> computeRecommendationsForStudent(Long studentId) {
+        // TODO: compute and store recommendations
+        return List.of();
+    }
+
+    @Override
+    public List<SkillGapRecommendation> getRecommendationsForStudent(Long studentId) {
+        // TODO: fetch saved recommendations
         return List.of();
     }
 }
