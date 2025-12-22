@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.entity.AssessmentResult;
-import com.example.demo.service.AssessmentService;
+import com.example.demo.service.AssessmentResultService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,10 +11,10 @@ import java.util.List;
 @RequestMapping("/api/assessments")
 public class AssessmentController {
 
-    private final AssessmentService service;
+    public final AssessmentResultService service;
 
     // Constructor Injection
-    public AssessmentController(AssessmentService service) {
+    public AssessmentController(AssessmentResultService service) {
         this.service = service;
     }
 
