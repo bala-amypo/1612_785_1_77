@@ -2,10 +2,11 @@ package com.example.demo.service;
 
 import com.example.demo.entity.AssessmentResult;
 import org.springframework.stereotype.Service;
-import 
+ 
 import java.util.ArrayList;
 import java.util.List;
-
+import lombok.Getter;
+import lombok.Setter;
 @Service
 public class AssessmentService {
 
