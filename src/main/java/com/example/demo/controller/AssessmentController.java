@@ -5,9 +5,6 @@ import com.example.demo.service.AssessmentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
-
-
 import java.util.List;
 
 @RestController
@@ -16,6 +13,7 @@ public class AssessmentController {
 
     private final AssessmentService service;
 
+    // Constructor Injection
     public AssessmentController(AssessmentService service) {
         this.service = service;
     }
@@ -34,6 +32,8 @@ public class AssessmentController {
     public ResponseEntity<List<AssessmentResult>> getByStudentSkill(
             @PathVariable Long studentId,
             @PathVariable Long skillId) {
-        return ResponseEntity.ok(service.getResultsByStudentAndSkill(studentId, skillId));
+        return ResponseEntity.ok(
+                service.getResultsByStudentAndSkill(studentId, skillId)
+        );
     }
 }
