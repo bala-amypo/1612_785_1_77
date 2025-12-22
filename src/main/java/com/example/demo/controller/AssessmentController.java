@@ -11,21 +11,21 @@ import java.util.List;
 @RequestMapping("/api/assessments")
 public class AssessmentController {
 
-    public final AssessmentResultService service;
+    public final AssessmentResultService serve;
 
   
-    public AssessmentController(AssessmentResultService service) {
-        this.service = service;
+    public AssessmentController(AssessmentResultService serve) {
+        this.serve = serve;
     }
 
     @PostMapping
     public ResponseEntity<AssessmentResult> record(@RequestBody AssessmentResult result) {
-        return ResponseEntity.ok(service.recordAssessment(result));
+        return ResponseEntity.ok(serve.recordAssessment(result));
     }
 
     @GetMapping("/student/{studentId}")
     public ResponseEntity<List<AssessmentResult>> getByStudent(@PathVariable Long studentId) {
-        return ResponseEntity.ok(service.getResultsByStudent(studentId));
+        return ResponseEntity.ok(serve.getResultsByStudent(studentId));
     }
 
     @GetMapping("/student/{studentId}/skill/{skillId}")
@@ -33,7 +33,7 @@ public class AssessmentController {
             @PathVariable Long studentId,
             @PathVariable Long skillId) {
         return ResponseEntity.ok(
-                service.getResultsByStudentAndSkill(studentId, skillId)
+                serve.getResultsByStudentAndSkill(studentId, skillId)
         );
     }
 }
