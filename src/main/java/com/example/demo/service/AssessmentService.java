@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public interface AssessmentService {
 
-    private final List<AssessmentResult> results = new ArrayList<>();
+    public final List<AssessmentResult> results = new ArrayList<>();
 
     
     public AssessmentResult recordAssessment(AssessmentResult result) {
