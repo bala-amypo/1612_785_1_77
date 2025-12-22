@@ -10,7 +10,8 @@ import java.util.List;
 public class SkillGapServiceImpl implements SkillGapService {
 
     @Override
-    public List<SkillGapRecord> computeGaps(Long studentId) {
+    public List<SkillGapRecord> getGapsByStudent(Long studentId) {
+        // TODO: add real gap calculation logic later
         return List.of();
     }
 }
