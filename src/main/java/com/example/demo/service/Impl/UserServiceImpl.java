@@ -19,7 +19,7 @@ public class UserServiceImpl implements AuthService {
         User user = new User();
         user.setFullName(req.getFullName());
         user.setEmail(req.getEmail());
-        user.setPassword(req.getPassword()); // NO encoder
+        user.setPassword(req.getPassword());
         user.setRole(req.getRole());
         return userRepository.save(user);
     }
