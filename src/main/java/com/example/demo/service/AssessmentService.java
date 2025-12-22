@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class AssessmentService {
+public interface AssessmentService {
 
     private final List<AssessmentResult> results = new ArrayList<>();
 
