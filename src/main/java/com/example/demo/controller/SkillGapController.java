@@ -11,19 +11,19 @@ import java.util.List;
 @RequestMapping("/api/gaps")
 public class SkillGapController {
 
-    private final SkillGapService service;
+    private final SkillGapService serve;
 
-    public SkillGapController(SkillGapService service) {
-        this.service = service;
+    public SkillGapController(SkillGapService serve) {
+        this.serve = serve;
     }
 
     @PostMapping("/compute/{studentId}")
     public ResponseEntity<List<SkillGapRecord>> compute(@PathVariable Long studentId) {
-        return ResponseEntity.ok(service.computeGaps(studentId));
+        return ResponseEntity.ok(serve.computeGaps(studentId));
     }
 
     @GetMapping("/student/{studentId}")
     public ResponseEntity<List<SkillGapRecord>> get(@PathVariable Long studentId) {
-        return ResponseEntity.ok(service.getGapsByStudent(studentId));
+        return ResponseEntity.ok(serve.getGapsByStudent(studentId));
     }
 }
