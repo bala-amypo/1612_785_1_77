@@ -1,10 +1,10 @@
-package com.example.demo.service;
+// package com.example.demo.service;
 
-import com.example.demo.entity.SkillGapRecord;
-import java.util.List;
+// import com.example.demo.entity.SkillGapRecord;
+// import java.util.List;
 
-public interface SkillGapService {
+// public interface SkillGapService {
 
-    List<SkillGapRecord> getGapsByStudent(Long studentId);
+//     List<SkillGapRecord> getGapsByStudent(Long studentId);
 
-}
+// }
