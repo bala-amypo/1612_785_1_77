@@ -1,30 +1,30 @@
-package com.example.demo.entity;
+// package com.example.demo.entity;
 
-import jakarta.persistence.*;
-import java.time.Instant;
-import lombok.Getter;
-import lombok.Setter;
+// import jakarta.persistence.*;
+// import java.time.Instant;
+// import lombok.Getter;
+// import lombok.Setter;
 
-@Getter
-@Setter
+// @Getter
+// @Setter
 
-@Entity
-public class SkillGapRecord {
+// @Entity
+// public class SkillGapRecord {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+//     @Id
+//     @GeneratedValue(strategy = GenerationType.IDENTITY)
+//     private Long id;
 
-    @ManyToOne
-    private StudentProfile studentProfile;
+//     @ManyToOne
+//     private StudentProfile studentProfile;
 
-    @ManyToOne
-    private Skill skill;
+//     @ManyToOne
+//     private Skill skill;
 
-    private Double currentScore;
-    private Double targetScore;
-    private Double gapScore;
-    private Instant calculatedAt = Instant.now();
+//     private Double currentScore;
+//     private Double targetScore;
+//     private Double gapScore;
+//     private Instant calculatedAt = Instant.now();
 
-    // getters & setters
-}
+//     // getters & setters
+// }
